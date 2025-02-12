@@ -4,7 +4,7 @@ import PageWrapper from "./PageWrapper.tsx";
 const Projects = () => {
     return (<PageWrapper title={"projects"} id={"projects"} icon={<GiFilmProjector/>}>
         <div>
-            test
+            testas
         </div>
     </PageWrapper>);
 };
