@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+a.footer:active, a.footer:hover {
+    color: rgb(30 41 59);
+}
+
+a.nav-menu:active, a.nav-menu:hover {
+    cursor: pointer;
+    text-shadow: 1px 0px 0px white;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    pointer-events: none; /* Prevent interaction if needed */
+}
