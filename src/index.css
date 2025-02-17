@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /*filter: invert(1);*/
+}
+
+a.footer:active, a.footer:hover {
+    text-shadow: 1px 0 0 black;
+}
+
+a.nav-menu:active, a.nav-menu:hover {
+    text-shadow: 1px 0 0 black;
+}
+
+.homemade-button:hover {
+    cursor: pointer;
+    text-shadow: 1px 0 0 black;
+}
