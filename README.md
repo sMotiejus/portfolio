@@ -1,2 +1,2 @@
 # Portfolio
-## Created using React.JS, TypeScript, Tailwind.
+Created using React.JS, TypeScript, Tailwind.
