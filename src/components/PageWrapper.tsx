@@ -1,20 +1,21 @@
 interface PageWrapperProps {
     id: string;
     title: string;
-    children?: JSX.Element;
+    subtitle?: string;
+    children?: React.ReactNode;
+    minFullPage?: boolean;
 }
 
-const PageWrapper = ({title, id, children}: PageWrapperProps) => {
+const PageWrapper = ({id, title, subtitle, children, minFullPage = false}: PageWrapperProps) => {
     return (
-        <div id={id} className={"min-h-screen"}>
-            <div className="relative py-16 lg:py-8 px-16 flex flex-col gap-8 lg:gap-16 justify-center items-center">
-                <div
-                    className={"text-4xl lg:text-6xl text-nowrap font-bold flex"}>
-                    {title}
-                </div>
-                {children}
+        <section id={id}
+                 className={`${minFullPage ? "min-h-screen" : ""} flex flex-col items-center py-16 lg:py-8 px-4 gap-8`}>
+            <div className="text-center">
+                <h1 className="text-4xl lg:text-6xl font-bold">{title}</h1>
+                {subtitle && <p className="text-2xl mt-2">{subtitle}</p>}
             </div>
-        </div>
+            <div className="w-full max-w-6xl">{children}</div>
+        </section>
     );
 };
 

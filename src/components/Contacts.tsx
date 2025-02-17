@@ -30,13 +30,6 @@ const Contacts = () => {
                     <p className={"hidden lg:block text-xl"}>motiejusslim@gmail.com</p>
                 </a>
 
-
-                {/*<a className={"footer flex gap-4 items-center"} href="mailto:motiejusslim@gmail.com"*/}
-                {/*   target="_blank" rel="noopener noreferrer">*/}
-                {/*    <BsSend/>*/}
-                {/*    <p className={"hidden lg:block text-xl"}>Contact Me</p>*/}
-                {/*</a>*/}
-
                 <a className={"footer flex gap-4 items-center"} href="https://www.linkedin.com/in/motiejusslimas/"
                    target="_blank" rel="noopener noreferrer">
                     <FaLinkedinIn/>
@@ -49,11 +42,20 @@ const Contacts = () => {
                     <p className={"hidden lg:block text-xl"}>GitHub</p>
                 </a>
 
-                <a className={"footer flex gap-4 items-center"} href="mailto:motiejusslim@gmail.com"
-                   target="_blank" rel="noopener noreferrer">
+                <button className={"homemade-button footer flex gap-4 items-center"}
+                        onClick={() => {
+                            const pdfUrl = "Motiejus_Slimas_CV.pdf";
+                            const link = document.createElement("a");
+                            link.href = pdfUrl;
+                            link.download = "Motiejus_Slimas_CV.pdf";
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }}
+                >
                     <AiFillSave/>
                     <p className={"hidden lg:block text-xl"}>CV</p>
-                </a>
+                </button>
             </div>
         </div>
     );
