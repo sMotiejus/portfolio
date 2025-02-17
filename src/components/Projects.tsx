@@ -1,8 +1,7 @@
-import {GiFilmProjector} from "react-icons/gi";
 import PageWrapper from "./PageWrapper.tsx";
 
 const Projects = () => {
-    return (<PageWrapper title={"projects"} id={"projects"} icon={<GiFilmProjector/>}>
+    return (<PageWrapper title={"PROJECTS"} id={"projects"}>
         <div>
             testas
         </div>

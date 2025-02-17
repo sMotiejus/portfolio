@@ -1,31 +1,26 @@
 import NavbarDesktop from "./NavbarDesktop.tsx";
-import {useEffect, useState} from "react";
 import NavbarMobile from "./NavbarMobile.tsx";
 
 
 const Navbar = () => {
-    const [opaque, setOpaque] = useState(false);
+    const locationsMobile = [
+        {href: "#", title: "Home"},
+        {href: "#tech-stack", title: "Tech Stack"},
+        {href: "#education", title: "Education"},
+        {href: "#work-experience", title: "Work Experience"},
+        {href: "#projects", title: "Projects"},
+    ];
 
-    useEffect(() => {
-        window.onscroll = () => {
-            if (window.scrollY > 90) {
-                setOpaque(true);
-            } else {
-                setOpaque(false);
-            }
-        };
-    }, []);
-
-    const locations = [
-        {href: "#", title: "about"},
-        {href: "#skills", title: "skills"},
-        {href: "#work-experience", title: "work experience"},
-        {href: "#projects", title: "projects"},
+    const locationsDesktop = [
+        {href: "#", title: "Tech Stack"},
+        {href: "#education", title: "Education"},
+        {href: "#work-experience", title: "Work Experience"},
+        {href: "#projects", title: "Projects"},
     ];
 
     return <>
-        <NavbarDesktop opaque={opaque} pages={locations}/>
-        <NavbarMobile opaque={opaque} pages={locations}/>
+        <NavbarDesktop pages={locationsDesktop}/>
+        <NavbarMobile pages={locationsMobile}/>
     </>;
 }
 

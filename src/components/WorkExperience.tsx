@@ -1,10 +1,8 @@
 import PageWrapper from "./PageWrapper.tsx";
-import {GrUserWorker} from "react-icons/gr";
 
 const WorkExperience = () => {
-    return (<PageWrapper title={"work experience"} id={"work-experience"} icon={<GrUserWorker/>}>
-        <div>
-            test
+    return (<PageWrapper title={"WORK EXPERIENCE"} id={"work-experience"}>
+        <div className={"flex flex-col gap-24"}>
         </div>
     </PageWrapper>);
 };

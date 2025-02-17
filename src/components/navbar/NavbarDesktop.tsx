@@ -1,28 +1,20 @@
 interface NavbarDesktopProps {
-    opaque?: boolean;
     pages: { href: string, title: string }[]
 }
 
-const NavbarDesktop = ({opaque = true, pages}: NavbarDesktopProps) => {
+const NavbarDesktop = ({pages}: NavbarDesktopProps) => {
     return (
-        <div
-            className={`
-             hidden lg:flex
-             fixed justify-center items-center
-             h-14 top-0 left-0 right-0 
-             text-white gap-2 md:gap-8 
-             text-xl z-3
-                ${opaque && "bg-slate-800/95"}
-                `}
-        >
-            {
-                pages.map(({title, href}, index) => {
-                    return <>
-                        {(index !== 0) && "|"}
-                        <a className={`nav-menu`} href={href}>{title}</a>
-                    </>
-                })
-            }
+        <div className={`hidden lg:flex flex-col`}>
+            <div className={"flex justify-center text-3xl"}>Meniu</div>
+            <div className={`flex flex-col gap-4 border-2 rounded-xl pl-10 py-2 text-4xl`}>
+                <ul role="list" className="list-disc">
+                    {pages.map(({title, href}) => (
+                        <li key={href}>
+                            <a className="nav-menu" href={href}>{title}</a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }
