@@ -18,7 +18,7 @@ const Explainer = ({dateFrom, dateTo, title, location, locationLink, bullets, us
             </div>
             <div className={"flex flex-col gap-2 lg:gap-4"}>
                 <div className={"flex flex-col"}>
-                    <div className={"font-bold text-lg lg:text-3xl"}>{title}</div>
+                    <div className={"comic-neue-bold text-lg lg:text-3xl"}>{title}</div>
                     {locationLink ?
                         <a href={locationLink}
                            className={"flex items-center gap-2 lg:text-2xl"}

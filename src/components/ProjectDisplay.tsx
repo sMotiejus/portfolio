@@ -18,7 +18,7 @@ const ProjectDisplay = ({title, description, used, source, imageSrc}: ProjectDis
             </div>
             <div className={"pt-5 flex flex-col gap-5"}>
                 <div className={"flex flex-col"}>
-                    <div className={"font-bold text-2xl"}>{title}</div>
+                    <div className={"comic-neue-bold text-2xl"}>{title}</div>
                     <div>{description}</div>
                 </div>
                 {
@@ -34,7 +34,7 @@ const ProjectDisplay = ({title, description, used, source, imageSrc}: ProjectDis
                             source.map(({title, url}) => (
                                 <button
                                     key={title}
-                                    className={"homemade-button font-bold text-xl border-2 rounded-2xl flex gap-2 justify-center items-center px-1"}
+                                    className={"homemade-button comic-neue-bold text-xl border-2 rounded-2xl flex gap-2 justify-center items-center px-1"}
                                     onClick={() => {
                                         const w = window.open(url, '_blank');
                                         if (w) {

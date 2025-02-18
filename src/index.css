@@ -1,12 +1,40 @@
 @import "tailwindcss";
 
-html, body {
-    scroll-behavior: smooth;
+@font-face {
+    font-family: "Comic Neue Custom";
+    src: url("/fonts/comic-neue/ComicNeue-Regular.woff2") format("woff2"),
+    url("/fonts/comic-neue/ComicNeue-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
-* {
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    /*filter: invert(1);*/
+@font-face {
+    font-family: "Comic Neue Custom";
+    src: url("/fonts/comic-neue/ComicNeue-Bold.woff2") format("woff2"),
+    url("/fonts/comic-neue/ComicNeue-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic Sans Custom";
+    src: url("/fonts/comic-sans/ComicSans.woff2") format("woff2"),
+    url("/fonts/comic-sans/ComicSans.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic Sans Custom";
+    src: url("/fonts/comic-sans/ComicSansBold.woff2") format("woff2"),
+    url("/fonts/comic-sans/ComicSansBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: "Comic Sans Custom", "Comic Neue Custom", sans-serif;
 }
 
 a.footer:active, a.footer:hover {
