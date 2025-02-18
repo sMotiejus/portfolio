@@ -1,5 +1,5 @@
 # Motiejus Šlimas Portfolio
 
 After installing repository write:
-``npm run start``
+``npm run dev``
 
